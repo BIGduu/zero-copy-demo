@@ -8,6 +8,7 @@ import io.netty.channel.socket.SocketChannel
 import io.netty.channel.socket.nio.NioSocketChannel
 import io.netty.handler.codec.serialization.ObjectEncoder
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import org.slf4j.LoggerFactory
@@ -16,6 +17,7 @@ import java.net.InetSocketAddress
 
 fun main() {
     runBlocking {
+        delay(10000)
         launch(Dispatchers.IO) { fileClient() }
     }
 }
